@@ -4,3 +4,6 @@
 
 a selection was made on a basis of analist estimates and real-value of stock on march 2020 (covid)
 
+furthermore quite a few ratio's are considered as well
+
+
