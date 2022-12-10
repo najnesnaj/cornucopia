@@ -1,0 +1,51 @@
+HOWTO read and understand a report
+----------------------------------
+
+#Description
+
+The head of the document contains a lot of information as found on yahoo finance.
+This is only there for reference, and it includes a description of the company
+
+#A value analysis
+
+This shows the health of a company : 
+- does it have debt
+- does it grow
+- how is it priced
+
+
+To complete you'll find the quarter - EBIT data.
+This is used to calculated the new P/E.
+Which could be an indicator of price-evolution.
+
+
+
+#insider data
+
+- in my humble and maybe naive worldview, high rank insider buying is OK
+
+
+#analist fortune telling
+
+
+the market price is compared to march 2020 (COVID) and to analist estimate (yahoo)
+
+- I consider it OK if pricelevel is not a lot above COVID-pricing
+- if it's a lot cheaper than analists would like, maybe a buy?
+
+
+#technical analysis
+
+you can skip this, I do not believe in it, but I like the graphics ....
+
+#risc
+
+P/E > 15, debt, assets vs liabilities, insider selling ....
+
+#comparison
+
+Phd. Obermatt attributes a score to value, growth, safety
+on the Obermatt website you can compare with other companies
+
+
+
