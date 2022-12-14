@@ -1,0 +1,103 @@
+"""
+Author: naj 
+Date: 2022-12-14
+MIT License
+"""
+
+#drie parameters worden telkens verhoogd met 10 bij bepaalde voorwaarden (ratio's)
+
+#GROWTH
+#RISC
+#VALUE
+
+#
+voor de selectie van interessante aandelen : GROWTH + VALUE - RISC
+degene met de hoogste score, wint!
+
+select * from nordicinfo where enterpriseToEbitda > 0 and trailingPE > 0 order by (growth_score + value_score - risc_score);
+#
+
+
+#omzetgroei
+
+
+                print ("groei", groei)
+                if groei > 0.01:
+                    GROWTH = GROWTH + 10
+                if groei > 0.05:
+                    GROWTH = GROWTH + 10
+                if groei > 0.10:
+                    GROWTH = GROWTH + 20
+                if groei < 0:
+                    RISC = RISC + 10
+
+#soort bedrijf
+
+
+                if company_info == "SMALL CAP" or company_info == "FINANCIALS":
+                    RISC = RISC + 10
+
+#Price Earnings
+
+                if trailingPE < 15:
+                     VALUE = VALUE + 10
+                if trailingPE < 10:
+                     VALUE = VALUE + 10
+                if trailingPE > 15:
+                     RISC = RISC +10
+                if trailingPE > 30:
+                     RISC = RISC +10
+    
+#pricetobook
+                if prijstobook < 2:
+                    VALUE=VALUE+10
+                if prijstobook < 1:
+                    VALUE=VALUE+10
+                if prijstobook > 2:
+                    RISC=RISC + 10
+                if prijstobook > 3:
+                    RISC=RISC + 10
+                        #riciso is verhoogd omdat je gegeven niet hebt
+                if prijstobook == 0:
+                    RISC=RISC + 20
+#tangiblevalue
+                if tangiblevalue < .5:
+                        RISC=RISC + 10
+
+
+#entreprise to ebitda
+                if etoebitda < 10:
+                    VALUE=VALUE + 10
+                if etoebitda < 6:
+                    VALUE=VALUE + 10
+
+
+#schuldgraad
+
+                if realdebt > .5:
+                    RISC=RISC+10
+                if realdebt > 1:
+                    RISC=RISC+10
+                if realdebt > 2:
+                    RISC=RISC+20
+
+#groei over de laatste 4 kwartalen
+
+                    
+                if groeiq > 0.01:
+                    GROWTH = GROWTH + 10
+                if groeiq > 0.05:
+                    GROWTH = GROWTH + 10
+                if groeiq > 0.10:
+                    GROWTH = GROWTH + 20
+                if groeiq < 0:
+                    RISC = RISC + 10
+
+#percentueel verschil gemiddelde prijs laatste maand met analisten schattingen
+
+                if analist > 20:
+                    GROWTH = GROWTH + 10
+                if analist > 50:
+                    GROWTH = GROWTH + 10
+
+
