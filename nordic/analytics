@@ -14,7 +14,14 @@ MIT License
 voor de selectie van interessante aandelen : GROWTH + VALUE - RISC
 degene met de hoogste score, wint!
 
+
+
+
+
 select * from nordicinfo where enterpriseToEbitda > 0 and trailingPE > 0 order by (growth_score + value_score - risc_score);
+
+
+Opmerking : soms is bepaalde data onvindbaar en krijg ik null-waarde, die ik vervangen heb door cijfer dat een slechtere score oplevert
 #
 
 
@@ -99,5 +106,24 @@ select * from nordicinfo where enterpriseToEbitda > 0 and trailingPE > 0 order b
                     GROWTH = GROWTH + 10
                 if analist > 50:
                     GROWTH = GROWTH + 10
+
+#beta < 1.2
+                if beta < 1.2:
+                    VALUE=VALUE + 10
+                else:
+                    RISC = RISC + 10
+
+
+#current ratio
+
+                if current_ratio < 1.3:
+                    RISC = RISC + 10
+                else:
+                    VALUE = VALUE + 10
+
+#price_to_sales
+
+                if price_to_sales < 2:
+                    VALUE = VALUE + 10
 
 
